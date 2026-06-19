@@ -10,6 +10,5 @@ WORKDIR /app
 COPY --from=build /out/shortlink /app/shortlink
 ENV PORT=8080 DB_PATH=/data/shortlink.db
 EXPOSE 8080
-VOLUME ["/data"]
 USER nonroot:nonroot
 ENTRYPOINT ["/app/shortlink"]
